@@ -121,6 +121,32 @@ rules:
 - apiGroups:
   - test.openstack.org
   resources:
+  - horizons
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.openstack.org
+  resources:
+  - horizons/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - test.openstack.org
+  resources:
+  - horizons/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - test.openstack.org
+  resources:
   - tempests
   verbs:
   - create
